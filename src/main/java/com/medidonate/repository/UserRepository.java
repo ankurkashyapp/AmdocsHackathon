@@ -16,9 +16,7 @@ public interface UserRepository extends JpaRepository<User, Integer>
    
    @Modifying
    @Transactional(readOnly = false)
-   @Query("INSERT INTO public.\"USERS_DETAILS\"(\r\n" + 
-   		"	\"NAME\", \"EMAIL\", \"GENDER\", \"CITY\", \"ADDRESS\", \"PASSWORD\", \"TYPE\", \"PIC\", \"MOBILE\")\r\n" + 
-   		"	VALUES ('Ankur', 'aanchal@gmail.com', 'F', 'Pune', 'Sinhgad', 'User123', 'NGO', 'AAA', '808888') ")
+   @Query("insert into public.\"USER_DETAILS\" (NAME,EMAIL,GENDER,CITY,ADDRESS,PASSWORD,TYPE,PIC,MOBILE) VALUES ('Ankur', 'aanchal@gmail.com', 'F', 'Pune', 'Sinhgad', 'User123', 'NGO', 'AAA', '808888')")
    public void saveData() ;
    
    
