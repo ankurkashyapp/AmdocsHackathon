@@ -1,24 +1,39 @@
 package com.medidonate.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "USERS")
 public class User {
 
-	private String uName;
-	private String mobile;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+	
+	private String name;
+	private String type;
 	private String email;
 	private String address;
 	private String city;
-	
-	public String getuName() {
-		return uName;
+	private String gender;
+	private String pic;
+	private String mobile;
+	private String password;
+	public String getName() {
+		return name;
 	}
-	public void setuName(String uName) {
-		this.uName = uName;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getMobile() {
-		return mobile;
+	public String getType() {
+		return type;
 	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
+	public void setType(String type) {
+		this.type = type;
 	}
 	public String getEmail() {
 		return email;
@@ -38,4 +53,32 @@ public class User {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getPic() {
+		return pic;
+	}
+	public void setPic(String pic) {
+		this.pic = pic;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+	
+	
 }
