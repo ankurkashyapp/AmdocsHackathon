@@ -6,15 +6,15 @@ import com.medidonate.model.User;
 import com.medidonate.repository.UserRepository;
 import com.medidonate.utils.AbstractResponse;
 
-public class UserServiceImpl implements UserServiceIntf {
+public class UserServiceImpl implements UserService {
 
 	@Autowired
-	UserRepository userRepo;
+	UserRepository userRepository;
 	
 	@Override
 	public AbstractResponse saveUser(User user) {
 
-		userRepo.save(user);
+		userRepository.save(user);
 		AbstractResponse ar = new AbstractResponse();
 		ar.setStatusCode("200");
 		ar.setMessage("OK");
