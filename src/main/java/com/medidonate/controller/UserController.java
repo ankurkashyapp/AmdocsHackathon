@@ -1,7 +1,7 @@
 package com.medidonate.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +18,7 @@ public class UserController {
 	UserService userService;
 	
 	@RequestMapping(path = "/createUser", method = RequestMethod.POST, consumes= {"application/json"}, produces= {"application/json"})
-	public AbstractResponse createUser(User user) {
+	public AbstractResponse createUser(@RequestBody User user) {
 		
 		
 		return userService.saveUser(user);
