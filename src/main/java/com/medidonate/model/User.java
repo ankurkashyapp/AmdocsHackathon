@@ -7,12 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//@Table(name = "public"+"." + "\"USERS_DETAILS\"")
+import com.medidonate.utils.AbstractResponse;
+
 @Entity
-public class User {
+@Table(name = "users_details")
+public class User extends AbstractResponse{
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="ID")
 	private Integer id;
 	
@@ -103,6 +105,14 @@ public class User {
 				+ ", city=" + city + ", gender=" + gender + ", pic=" + pic + ", mobile=" + mobile + ", password="
 				+ password + "]";
 	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	
 	
 	
 	

@@ -4,6 +4,7 @@ public class AbstractResponse {
 
 	private String statusCode;
 	private String message;
+	private String errorMessage;
 	
 	public String getStatusCode() {
 		return statusCode;
@@ -16,6 +17,13 @@ public class AbstractResponse {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
 	}	
+	
 }
 

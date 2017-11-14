@@ -6,4 +6,5 @@ import com.medidonate.utils.AbstractResponse;
 public interface UserService {
 
 	public AbstractResponse saveUser(User user);
+	public User userLogin(String email, String password);
 }

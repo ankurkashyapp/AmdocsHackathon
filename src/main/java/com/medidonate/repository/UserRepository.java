@@ -13,11 +13,12 @@ import com.medidonate.model.User;
 public interface UserRepository extends JpaRepository<User, Integer>
 {
    public List<User> findByNameIgnoreCaseContaining(String name);
-   
-   @Modifying
+   public User findByEmailAndPassword(String email, String password);
+   public User findById(Integer id);
+  /* @Modifying
    @Transactional(readOnly = false)
    @Query("insert into public."+"'"+"USER_DETAILS"+"'"+"(NAME,EMAIL,GENDER,CITY,ADDRESS,PASSWORD,TYPE,PIC,MOBILE) VALUES ('Ankur', 'aanchal@gmail.com', 'F', 'Pune', 'Sinhgad', 'User123', 'NGO', 'AAA', '808888')")
-   public void saveData() ;
+   public void saveData() ;*/
    
    
    
