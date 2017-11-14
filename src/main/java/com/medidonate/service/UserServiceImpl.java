@@ -18,7 +18,8 @@ public class UserServiceImpl implements UserService {
 	public AbstractResponse saveUser(User user) {
 		System.out.println(user.toString());
 		try {
-		userRepository.save(user);
+		//userRepository.save(user);
+			userRepository.saveData();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
