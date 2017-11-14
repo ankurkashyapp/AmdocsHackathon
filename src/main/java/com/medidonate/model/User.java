@@ -1,5 +1,6 @@
 package com.medidonate.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,17 +13,36 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="ID")
 	private Integer id;
 	
+	@Column(name="NAME")
 	private String name;
+	
+	@Column(name="TYPE")
 	private String type;
+	
+	@Column(name="EMAIL")
 	private String email;
+	
+	@Column(name="ADDRESS")
 	private String address;
+	
+	@Column(name="CITY")
 	private String city;
+	
+	@Column(name="GENDER")
 	private String gender;
+	
+	@Column(name="PIC")
 	private String pic;
+	
+	@Column(name="MOBILE")
 	private String mobile;
+	
+	@Column(name="PASSWORD")
 	private String password;
+	
 	public String getName() {
 		return name;
 	}
