@@ -15,8 +15,12 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public AbstractResponse saveUser(User user) {
-
+		System.out.println();
+		try {
 		userRepository.save(user);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		AbstractResponse ar = new AbstractResponse();
 		ar.setStatusCode("200");
 		ar.setMessage("OK");

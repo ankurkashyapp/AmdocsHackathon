@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class User {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	@Column(name="ID")
 	private Integer id;
 	
@@ -96,6 +96,12 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", type=" + type + ", email=" + email + ", address=" + address
+				+ ", city=" + city + ", gender=" + gender + ", pic=" + pic + ", mobile=" + mobile + ", password="
+				+ password + "]";
 	}
 	
 	
